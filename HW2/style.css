@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(images/bgg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.main_circle{
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    position: relative;
+    border-radius: 50%;
+    background-image: url(images/bgi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 20%;
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    border-radius: 25px;
+    background-image: url(images/earth.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 500px;
+}
+
+.buttons button {
+    font-size: 25px;
+    width: 30%;
+    border: none;
+    background-color: #ffffff3d;
+    border-radius: 10px;
+    color: #ffffffbd;
+    border: 2px solid rgba(249, 247, 247, 0.256);
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+  
