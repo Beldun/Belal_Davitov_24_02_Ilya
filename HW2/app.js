@@ -31,12 +31,53 @@ function startRotation() {
   clearInterval(intervalId); 
   intervalId = setInterval(rotateCircle, 20); 
 
-  clearTimeout(timeoutId); 
-  timeoutId = setTimeout(function () {
-    alert(
-      "Земля крутится уже пять минут, может уже пора остановиться просто смотреть на нее?"
-    );
-  }, 30000); 
+  function sendMessage(message) {
+    alert(message);
+  }
+  
+  function startCounter() {
+    let count = 0;
+    const interval = 30000;
+  
+    function handleInterval() {
+      count++;
+      
+      switch (count) {
+        case 1:
+          sendMessage("Прошло уже 5 минут, смотрю тебя это заворожило");
+          break;
+        case 2:
+          sendMessage("Прошло уже 10 минут, мне кажется у тебя должны быть дела поважнее");
+          break;
+        case 3:
+          sendMessage("Слушай, ты смотришь на то как крутится планета 15 минут, ничего не поменяется, если ты просто продолжишь смотреть");
+          break;
+        case 4:
+          sendMessage("20 минут, целых 20 минут ты на это смотришь, знаешь, делай что хочешь");
+          break;
+        case 5:
+          sendMessage("25 минут? Тебе что, больше заняться нечем? Может если я расскажу анекдот ты уйдешь?\
+          \nАнекдот:\
+          \nПриходит мужик к врачу и говорит: \n - Доктор, у меня пах чешится\
+          \n - Мой чаще \n - Нет, мой");
+          break;
+        case 6:
+          sendMessage("30 минут, пожалуй я просто сброшу счетчик и начну заново");
+          count = 0;
+          break;
+        default:
+          sendMessage("Ошибка: непредвиденное значение счетчика.");
+          count = 0;
+          break;
+      }
+  
+      setTimeout(handleInterval, interval);
+    }
+  
+    setTimeout(handleInterval, interval);
+  }
+  
+  startCounter();  
 }
 
 function stopRotation() {
