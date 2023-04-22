@@ -1,0 +1,64 @@
+{   
+    "products": [
+        {
+            "img": "media/iphone13.jpg",
+            "title": "Apple iPhone 13",
+            "price": "799,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/iphone13Pro.jpg",
+            "title": "Apple iPhone 13 Pro | Pro MAX",
+            "price": "999,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/iphone14.jpg",
+            "title": "Apple iPhone 14",
+            "price": "999,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/iphone14Pro.jpg",
+            "title": "Apple iPhone 14 Plus",
+            "price": "1200,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/macbookAirM2.jpg",
+            "title": "Apple MacBook Air M2 526Gb",
+            "price": "1499,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/macbook14.jpg",
+            "title": "Apple MacBook Pro 14 M2 1T",
+            "price": "3099,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/macbook16.png",
+            "title": "Apple MacBook Pro 16 M2 1T",
+            "price": "3499,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/airpods2.jpg",
+            "title": "Apple AirPods 2",
+            "price": "129,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/airpods3.jpg",
+            "title": "Apple AirPods 3",
+            "price": "179,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        },
+        {
+            "img": "media/airpodsPro.jpg",
+            "title": "Apple AirPods Pro",
+            "price": "249,00$",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus illum corporis neque, asperiores magnam, beatae ex, iure veritatis ducimus ullam fuga officiis quaerat aliquam."
+        }
+    ] 
+}

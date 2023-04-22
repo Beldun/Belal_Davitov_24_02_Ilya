@@ -1,0 +1,47 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .block {
+    width: 200px; 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .block img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    margin-top: 10px;
+  }
+  
+  .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .name {
+    font-weight: bold;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  
