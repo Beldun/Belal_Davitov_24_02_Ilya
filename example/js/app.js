@@ -1,26 +1,70 @@
-const modal = document.querySelector(".modal")
-const modalCloseBtn = document.querySelector(".modal__close")
-const modalOpenBtn = document.querySelector(".btn_white")
+const modal = document.querySelector(".modal");
+const modalCloseBtn = document.querySelector(".modal__close");
+const modalOpenBtn = document.querySelector(".btn_white");
 
 const openModal = () => {
-    modal.classList.add("show")
-    modal.classList.remove("hide")
-    document.body.style.overflow = "hidden"
-}
+    modal.classList.add("show");
+    modal.classList.remove("hide");
+    document.body.style.overflow = "hidden";
+};
 
 const closeModal = () => {
-    modal.classList.add("hide")
-    modal.classList.remove("show")
-    document.body.style.overflow = ""
+    modal.classList.add("hide");
+    modal.classList.remove("show");
+    document.body.style.overflow = "";
+};
+
+const closeModalSpecial = () => {
+    closeModal()
+    location.reload();
 }
 
 modalOpenBtn.addEventListener("click", openModal);
-modalCloseBtn.addEventListener("click", closeModal)
+modalCloseBtn.addEventListener("click", closeModal);
 
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        closeModal();
-    }
+const forms = document.querySelectorAll("form");
+
+const showModal = (title, message) => {
+    const modalContent = document.querySelector(".modal__content");
+    modalContent.innerHTML = `
+        <h2 class="modal__title" style="font-size:30px;">${title}</h2>
+        <p class="modal__message" style="font-size:20px; text-align:center; padding:40px">${message}</p>
+    `;
+    setTimeout(closeModalSpecial, 3000);
+};
+
+const postData = (form) => {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const obj = {};
+
+        formData.forEach((value, key) => {
+            obj[key] = value;
+        });
+
+        const json = JSON.stringify(obj);
+
+        const request = new XMLHttpRequest();
+        request.open("POST", "server.php");
+        request.setRequestHeader("Content-Type", "application/json");
+        request.send(json);
+        request.onload = () => {
+            if (request.status >= 200 && request.status <= 299) {
+                showModal("Succes", `Все отлично! Статус(${request.status})`);
+            } else if (request.status >= 400 && request.status <= 499) {
+                showModal("Ошибка", `Некорректный запрос. Статус(${request.status})`);
+            } else if (request.status >= 500 && request.status <= 599) {
+                showModal("Ошибка сервера", `Ошибка на сервере. Статус(${request.status})`);
+            }
+        };
+    });
+};
+
+forms.forEach((item) => {
+    postData(item);
 });
 
 
