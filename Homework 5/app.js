@@ -4,18 +4,16 @@ const euro = document.querySelector("#euro");
 
 const convert = (elem, target, isTrue, rate) => {
     elem.addEventListener("input", () => {
-        const request = new XMLHttpRequest();
-        request.open("GET", "data.json");
-        request.setRequestHeader("Contect-Type", "application/json");
-        request.send();
-        request.addEventListener("load", () => {
-            const data = JSON.parse(request.response)
-            isTrue ? 
-                target.value = (elem.value / data[rate]).toFixed(2)
-            :
-                target.value = (elem.value * data[rate]).toFixed(2)
-            elem.value === "" ? (target.value = "") : null
-        })
+        fetch("data.json")
+            .then(response => response.json())
+            .then(data => {
+                isTrue ? 
+                    target.value = (elem.value / data[rate]).toFixed(2)
+                :
+                    target.value = (elem.value * data[rate]).toFixed(2)
+                elem.value === "" ? (target.value = "") : null
+            })
+            .catch(error => console.error(error));
     })
 }
 
